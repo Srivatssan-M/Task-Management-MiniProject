@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="./css/user_dash.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+</head>
+
+<body>
+
+  <div class="navbar1">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: lightsteelblue;;height: 80px;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <h2 style="color: black;font-weight: bolder;">Task Management</h2>
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="./index.html"><button class="userlog">Logout</button></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="containertable">
+    <div class="welcome-message" id="para">Hello, User!</div>
+    <div class="dropdown-container">
+      <select id="dropdownsts" class="dropdown">
+        <option value="Status" class="dropdown1">All Tasks</option>
+        <option value="Completed" class="dropdown1">Completed</option>
+        <option value="In progress" class="dropdown1">In Progress</option>
+        <option value="Pending" class="dropdown1">Pending</option>
+      </select>
+      <button onclick="data()" id="fill"> Filter</button>
+      <button onclick="displayTable()" id="reset"> Reset</button>
+
+    </div>
+  </div>
+  <div class="input-group">
+    <input type="search" id="searchInput" placeholder="search or enter the text">
+  </div>
+  <image src="https://cdn3d.iconscout.com/3d/premium/thumb/task-not-found-8417937-6672501.png" id="replaceimage">
+  </image>
+  <div class="container mt-4">
+    <table class="table table-bordered table-striped mb-0" id="editableTable">
+      <thead style="background-color: #76a5acf5;">
+        <tr>
+          <th onclick="sorting(0)">Id</th>
+          <th onclick="sorting(1)">Title</th>
+          <th onclick="sorting(2)">Description</th>
+          <th onclick="sorting(4)">Status</th>
+          <th onclick="sorting(4)">Deadline</th>
+          <th onclick="sorting(4)">Comments</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="data1">
+
+      </tbody>
+    </table>
+  </div>
+  <script src="./script/userDashboard.js"></script>
+</body>
+
+</html>

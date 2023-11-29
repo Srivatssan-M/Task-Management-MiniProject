@@ -1,0 +1,66 @@
+header{
+    background-color: lightsteelblue;
+    text-align: right;
+    padding:1.5%;
+    /* font-size: x-large;
+    font-weight: bold; */
+}
+body{
+    background-color: #172031;
+}
+footer{
+    background-color: rgb(57, 175, 184);
+    text-align: center;
+    padding:1%;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+    height: 50;
+    
+    
+}
+
+.imgc{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.content{
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    margin-left: 12%;
+    margin-top: 15%;
+    color: #fff;
+}
+.icons{
+    color: aliceblue;
+}
+
+.userlog{
+    padding: 10px 20px;
+    font-size:16px ;
+    cursor: pointer;
+    color: black;
+    font-weight: bolder;
+    background-color: rgb(103, 212, 255);
+    border:none;
+    border-radius: 5px;
+    border: 2px solid darkslategrey;
+}
+.userlog:hover{
+    background-color:  tomato;
+}
+.logo{
+   
+    position: relative;
+    margin-right: 70%;
+    font-size: xx-large;
+    font-weight: bold;
+    color: black;
+}
+#userbtn{
+    position: relative;
+    margin-top: 10%;
+}
